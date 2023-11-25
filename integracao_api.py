@@ -4,6 +4,7 @@ import os
 
 dotenv.load_dotenv()
 
+openai.organization = os.getenv("OPENAI_API_ORGANIZATION_ID")
 openai.api_key = os.getenv("OPENAI_API_KEY")
 resposta = openai.ChatCompletion.create(
     model = "gpt-3.5-turbo",

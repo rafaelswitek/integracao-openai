@@ -13,6 +13,8 @@ def carrega(nome_do_arquivo):
         print(f"Erro: {e}")
 
 dotenv.load_dotenv()
+
+openai.organization = os.getenv("OPENAI_API_ORGANIZATION_ID")
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 prompt_sistema = """

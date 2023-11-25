@@ -36,6 +36,7 @@ def categorizaProduto(nome_do_produto, categorias_validas):
 
 dotenv.load_dotenv()
 
+openai.organization = os.getenv("OPENAI_API_ORGANIZATION_ID")
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 print("Digite as categorias validas:")
